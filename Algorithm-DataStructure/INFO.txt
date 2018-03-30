@@ -1,0 +1,26 @@
+JEST is NPM library from FB for Javascript testing Solutions or Test Runner like Karma 
+--> Jest is a complete and easy to set up JavaScript testing solution. 
+-->In fact, Jest works out of the box for any React project.
+
+@@@@ How to run Test cases for JS:
+Go to : D:\Vittal\POCs\JAVASCRIPT\Algorithm_DataStructure\AlgoCasts\exercises>jest (run the command)
+
+o/p-->
+Test Suites: 26 failed, 1 passed, 27 total
+Tests:       78 failed, 30 skipped, 32 passed, 140 total
+Snapshots:   0 total
+Time:        29.099s
+Ran all test suites.
+
+@@@ HOW to run one test file :
+jest <dirName>/tes-file.js --watch 
+Example : jest folder_name/test.js --watch OR jest <folder_name> --watch 
+
+
+@@ HOW TO DEBUG 
+--> put debugger in code
+--> invoke that particular method or line of code
+--> dir> node inspect file_name.js , to enter into DEBUG mode
+--> C and ENTER , to executing the next line like F10 in browser 
+--> repl (enther this command, to enter into JS console )
+--> type or keyed the variable you want to inspect that 

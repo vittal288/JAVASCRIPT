@@ -1,0 +1,8 @@
+Employee ID	Name	Competancy	Case Type	Case Status	Case filed date	Receipt notices	Case Approved on	Client Name	Client's IG
+1020535	Vittal Kamkar	C3	 	 	 	EAC1714352363	 	L'Oréal USA	10 Hudson Yards, New York, NY 10001, USA
+1015758	Shilpa Anavatti Ramamurthy	C4	 	 	 	EAC17141251189	L'Oréal USA	10 Hudson Yards, New York, NY 10001, USA
+1018127	Yogesh Kumar Swami 	C5	 	 	 	EAC1714553039	 	L'Oréal USA	10 Hudson Yards, New York, NY 10001, USA
+1019633	Asha Mary John	C4	 	 	 	EAC1714554138	 	L'Oréal USA	10 Hudson Yards, New York, NY 10001, USA
+
+Employee ID	Name	Competancy	Case Type	Case Status	Case filed date	Receipt notices	Case Approved on	Client Name	Client's IG	Work Location
+1017783	Vasanth Lakshmikumar	C4	 	 	 	EAC1714550820	 	Affinion	Crescent Centre Drive, Franklin, TN 37067	 

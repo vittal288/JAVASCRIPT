@@ -1,0 +1,61 @@
+#1 Download MONGO DB ZIP file from website with relevant bits 32||64 bits
+#2Create Folder in Main drive called MongoDB
+C:\MongoDB
+#3 Bring ZIP file in this folder and extract all information of ZIP file here
+#4 Create folder called data and create sub folders in data folder called db and log
+C:\MongoDB\data
+C:\MongoDB\data\db
+C:\MongoDB\data\log
+#5 Configuration 
+In C:\MongoDB , create a text file called mongo.config 
+
+	bind_ip = 127.0.0.1
+	port = 27017
+	quiet=true
+	dbpath = C:\MongoDB\data\db
+	logpath = C:\MongoDB\data\log\mongodb.log
+	logappend = true
+	
+	copy all these data to config file(please remove the .txt from mangodb.config.txt if you have)
+
+#6 open command prompt as administrator  
+Win+X, Press Letter A
+#6.a Navigate to C:\MongoDB\mongodb-win32-x86_64-v2.4-latest
+#7 Test MongoDB server
+>mongod.exe --config="C:\MongoDB\mongo.config"
+
+#8 Open another terminal as administrator and navigate to bin folder of mongoDB
+
+c:\MongoDB\mongodb-win32-x86_64-v2.4-latest\bin>mongo
+MongoDB shell version: 2.4.9-pre-
+connecting to: test
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+        http://docs.mongodb.org/
+Questions? Try the support group
+        http://groups.google.com/group/mongodb-user
+> db
+test
+> use test
+switched to db test
+> show tables
+> db.test.insert((x:2))
+Wed Mar 11 11:58:04.357 SyntaxError: Unexpected token :
+> db.test.insert({x:2})
+> db.test.find()
+{ "_id" : ObjectId("54ffe088d0fa0e8e22922d66"), "x" : 2 }
+
+
+STOP and START MONGODB
+>net start MongoDB
+>net stop MongoDB
+
+--------------------------------------
+Install MongoDB as Windows Service 
+	
+c:\MongoDB\mongodb-win32-x86_64-v2.4-latest\bin>sc create MongoDB binpath="\"C:\MongoDB\mongodb-win32-x86_64-v2.4-latest\bin\mongod.exe\" --service --config="\C:\MongoDB\mongo.config"" DispplayName ="MongoDB 2.6 Standard"
+
+[sc]Createservice success
+Go to Terminal 
+>services.msc

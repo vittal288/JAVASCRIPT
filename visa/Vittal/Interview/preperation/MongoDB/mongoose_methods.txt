@@ -1,0 +1,11 @@
+Mongoose methods 
+
+-->findFiltered
+Usage
+mongoose.model("Asset").findFiltered _search, { theme:req.session.theme}, (err, assets_subset) ->
+
+-->getMenus (Written in Modal)
+mongoose.model('Setting').getMenus {status: 'Active',type: 'menu',_id: $in: role.menus}, (err, menus) ->
+
+-->populate
+ mongoose.model("Setting").populate user, {path:"guilds", select:"name"}, (err, user) ->

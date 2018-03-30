@@ -1,0 +1,17 @@
+JS is lightwaight, Cross Platform and OOPS Programming language 
+
+Primitive (not a object)Data types:
+Number: always a floating value 5.0 
+String
+Boolean
+Undefined: Data type of a variable which does not have any value yet 
+null:Also means non-existant
+
+
+JS has Dynamic Typing :
+
+Type Coercion: convert one type to another: 26+"john"=> 26john 
+
+Variable Mutation : Changing the value of variable.
+
+Operator Precedense 

@@ -1,0 +1,130 @@
+<html>
+<head>
+<script>
+
+// //http://interactivepython.org/runestone/static/pythonds/SortSearch/TheBubbleSort.html
+// /* Bubble sort and remove dupilcates from an array */
+// //var arrUnSort =[54,26,93,17,77,31,44,55,20];//PASS
+// var arrUnSort =[1,0,3,3,2,2,4]; //PASS
+// //var arrUnSort = [1,0,3,3,2,2,4,5,5,5,8,1,6,7,7,0,0,22]; //PASS
+// var arrUnSort =['a','b','c','d','a','b','d','d','e','b','c','i','j','z']
+
+
+// Array.prototype.removeSortandDuplicate = function(){
+//     //this is pointing to array                       
+//     var passNum = this.length;
+//     // to repeat loops n*n times               
+//     while(passNum>0){       
+//         for(var i=0;i<this.length;i++){
+            
+//             //remove duplicates from an array 
+//             if(this[i]==this[i+1]){
+//                 var _indx = this.indexOf(this[i]);
+//                 this.splice(_indx,1);            
+//             }
+            
+//             //sort and array using bubble sort    
+//             if(this[i]>this[i+1]){
+//                 var _temp = this[i]; 
+//                 this[i] = this[i+1];
+//                 this[i+1] =_temp; 
+//             }     
+//         }                   
+//        passNum = passNum-1;
+//     }  
+//     return this;
+// }   
+
+// console.log(arrUnSort.removeSortandDuplicate());
+
+// var commonUtility = function(){
+    
+// };
+// var convertDateCls = function(){
+//     //this.convertMiliSecondStdFormat = function()
+// }
+
+// convertDateCls.prototype.convertMiliSecondStdFormat =function (milisecnds){  
+      
+//     var d = new Date(milisecnds);
+//     var sDt = d.toString();
+//     var aDate = sDt.split(" ");    
+   
+//     return aDate[3]+'-'+this.returnMonthNo(aDate[1])+"-"+aDate[2]+"T"+aDate[4]+"Z";
+// }
+
+// convertDateCls.prototype.returnMonthNo =function (monthName){ 
+//     var rtNo =0;
+//     if(monthName='Jan'){
+//         rtNo =01;
+//     }else if(monthName='Feb'){
+//         rtNo =02;
+//     }else if(monthName='Mar'){
+//         rtNo =03;
+//     }else if(monthName='Apr'){
+//         rtNo =04;
+//     }else if(monthName='May'){
+//         rtNo =05;
+//     }else if(monthName='Jun'){
+//         rtNo =06;
+//     }else if(monthName='Jul'){
+//         rtNo =07;
+//     }else if(monthName='Aug'){
+//         rtNo =08;
+//     }else if(monthName='Sep'){
+//         rtNo =09;
+//     }
+//     else if(monthName='Nov'){
+//         rtNo =10;
+//     }else if(monthName='Oct'){
+//         rtNo =11;
+//     }if(monthName='Dec'){
+//         rtNo =02;
+//     }
+    
+//     return rtNo;
+// }
+// var obj = new convertDateCls();
+
+// console.log('Format date', obj.convertMiliSecondStdFormat(1478473200000));
+
+//self invoking function, no need to create its instance and it will available globally
+(function(){ 
+    //convert mili seconds to standard date format: i/p '1478473200000' and o/p--> '2016-11-07T04:30:00Z' 
+    this.convertMiliSecondsToStdDateFormat = function(milisecnds){        
+        var d = new Date(milisecnds),
+            sDt = d.toString(),
+            aDate = sDt.split(" "); 
+        console.log('SADATE' , sDt);       
+        return aDate[3]+'-'+ returnMonthNo(aDate[1])+"-"+aDate[2]+"T"+aDate[4]+"Z";                 
+    };
+    
+    //convert month name string to its number: i/p-->'JAN' and o/p-->'1'
+    this.returnMonthNo= function(pMonthName){
+            debugger;
+            pMonthName = pMonthName.toString().toUpperCase().trim();
+            var _arrMonthNames =['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'],
+                _ilen =_arrMonthNames.length,
+                _imonthNo =0;
+            for(var i=0;i<=_ilen;i++){
+                if(_arrMonthNames[i] === pMonthName){
+                    _imonthNo =i+1;
+                    break;
+                }else{
+                    _imonthNo ='No Matches Found';
+                }
+            }                       
+        return _imonthNo;
+    }       
+})();
+
+console.log(convertMiliSecondsToStdDateFormat(1478473200000)); 
+//2016-2-07T04:30:00Z
+//2016-0-07T04:30:00Z
+//2016-9-07T04:30:00Z
+//Mon Nov 07 2016 04:30:00 GMT+0530 (India Standard Time)
+//2016-11-07T04:30:00Z
+</script>
+</head>
+
+</html>

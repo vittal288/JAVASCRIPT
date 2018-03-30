@@ -1,0 +1,48 @@
+REACTJS EXPLORE
+About REACTJS:https://youtu.be/Fgd2ivSnXXo
+
+.>The reactJS is facebook library for creating interactive, statefull and reusable UI components.
+.>It does the least amount of DOM manipulation possible in order to keep your components up to date using VIRTULA DOM
+.>React runs with "diffing" algorithm , which identifies the what has changed. The 2nd step is reconcillation , where it updates the where DOM has changed with result of diffing
+.> ReactJs building blocks are component
+
+
+
+1. Whenver you change the routes in the browser, a brand new component will create and leads to memory leak.
+So to avoid this issue , we have demount all the events which is registed to a component in componentWillUnmount
+Verify with this with following code
+console.log("COUNT ", ToDoStore.listenerCount("change"))
+
+2. FLUX ARCHITECTURE
+COMPONENTS-->ACTIONS-->DISPATCHER-->STORES:-->COMPONENTS
+//dispatcher.dispatch is used to call the methods from STORE using following  dispatcher.dispatch({type:"METHOD_NAME",prop_name:data})
+
+2.componentWillMount()
+ //this is the method of reactJS, will get invoke whenever component is ready to render to the DOM very first time only 
+ 
+3.It is very important to unlisten/ unregister the events  which are listened in the componentWillMount() function in componentUnmount()
+to avoid memory leaks.
+
+//register an events for store change 
+componentWillMount(){
+	sampleStore.on("change", this.getTodos);
+}
+
+componentUnmount(){
+	sampleStore.removeListener("change" , this.getTodos);
+}
+
+LIFECYCLE METHODS:
+componentWillMount() -->Invoked once, both client and server before rendering occurs.
+componentDidMount() -->Inovoked once, only on client side , after rendering occurs 
+shouldComponentUpdate()-->Return value should determinate whether component should update 
+componentUnmount()-->Inovoked prior to unmounting component
+
+SPECS:
+getInitialState-->Return value is the initial value for state 
+getDefaultProps-->sets fallback props value , if props value are not supplied 
+mixins-->An Array of objects an used extend the current component functionality 
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ REDUX @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+This is independent component for managing an application state , we can use this with ReactJS or AngularJS 
+
