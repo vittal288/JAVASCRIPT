@@ -3,6 +3,7 @@
 --> Execution Context (where the code execute!  for example globally )
     :Base execution context is global 
 --> Lexical Environments(Where the, code physically exists )
+--> Object never creates an executation context like function 
 
 ### How the code will execute ?
 -->JS engine will create a global object(window) and creates special variable called this 
@@ -247,11 +248,38 @@ sayHi('vittal')
  --> PROTOTYPE Inheritance, is simple, extensible and flexible 
  --> All object has reference to another object through PROTOTYPE object 
 
-### REFLECTION:
+### REFLECTION: (oops.js)
 --> an Object can look at itself, listing and changing its properties and methods called reflection
 
-### BUILDING OBJECT 
+### BUILDING OBJECT (create-object.js)
 
+--> new keyword is used to create an object 
+--> for example : var john = new Person();
+    -->in above example, new keyword will create and empty object and it inovokes the Person() methods
+    --> and it creates the executation context and "this" variable pointing to that empty object 
+
+### FUNCTION CONSTRUCTORS:
+--> A normal function that is used to construct an object and here "this" variable to point to an empty object
+    --> and that object is returned from the function automtically
+    --> JS has feature to convert string an object automtically but not with Numbers
+-->
+--> Build Function CONSTRUCTORS
+    --> var a = new Number(3);
+    --> var ar = new Array();
+    --> var str = new String('Vittal');
+
+### PROTOTYPE(prototype-object.js)
+ -->prototype it is feature of JS engine from which we can the dynamic methods and properties to an existing functions 
+ -->It  saves the memory by avoiding creating a single copy of methods and properties 
+ ## Advantage of adding prototype of methods and properties are
+    --> If you add methods direct to function object, it will create copy of same methods for all instances 
+    --> if you add same method through prototype chain, then it will be only one copy in memory 
+    --> hence it increases the perforamnce of a page 
+
+
+
+
+### BUILDING OUR OWN LIBRARY CALLED GREETER
 
 
 

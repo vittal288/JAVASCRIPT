@@ -33,7 +33,9 @@ console.log(sandy.getFullName());
 
 
 // REFLECTION , we are reflecting on vittal's object 
+// Scanning of all propeties of an object which is passed inside to a function and iterate through each object and the needful
 // --> an Object can look at itself, listing and changing its properties and methods called reflection
+// below is the example of reflection ; scanning of vittal object and iterate through a prop
 for (var prop in vittal){
     if(vittal.hasOwnProperty(prop)){
         console.log("REFLECT" , prop+':' +vittal[prop]);

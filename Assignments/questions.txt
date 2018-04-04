@@ -1,0 +1,2 @@
+Hacker Rank Questions:
+https://www.hackerrank.com/challenges/reduced-string/problem
