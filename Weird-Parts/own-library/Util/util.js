@@ -116,7 +116,7 @@
                 for (let char of str) {
                     charMap[char] = charMap[char] + 1 || 1;
                 }
-                
+
                 return charMap;
             }
         },
@@ -124,16 +124,37 @@
         // check for object idenitcal
         // input --> {a:1,b:2,c:3} , {a:1,b:2,c:3} o/p -->true 
         // input --> {a:1,b:2,c:4} , {a:1,b:2,c:3} o/p -->false 
-        isIdenticale:function(a,b){
-            if(Object.keys(a).length !== Object.keys(b).length){
+        isIdenticale: function (a, b) {
+            if (Object.keys(a).length !== Object.keys(b).length) {
                 return false
             }
-            for(let key in a){
-                if(a[key] !== b[key]){
+            for (let key in a) {
+                if (a[key] !== b[key]) {
                     return false
                 }
             }
             return true;
+        },
+
+        // --- Directions
+        // Write a function that accepts a string.  The function should
+        // capitalize the first letter of each word in the string then
+        // return the capitalized string.
+        // --- Examples
+        //   capitalize('a short sentence') --> 'A Short Sentence'
+        //   capitalize('a lazy fox') --> 'A Lazy Fox'
+        //   capitalize('look, it is working!') --> 'Look, It Is Working!'
+        capitalize: function (str) {
+            const words = [];
+            if (typeof str !== 'string') {
+                // throw 'Please pass a string as argument !!';  
+                return false;
+            } else {
+                for (let word of str.split(" ")) {
+                    words.push(word[0].toUpperCase() + word.slice(1));
+                }
+                return words.join(" ");
+            }
         }
     };
 

@@ -17,4 +17,20 @@ function removeDuplicates(arr) {
     });
 }
 
-console.log(removeDuplicates([1,1,2,3,2,3]));
+console.time('capitalize');
+function capitalize(str) {
+    const words =[];
+    if (typeof str !== 'string') {
+        // throw 'Please pass a string as argument !!';  
+         return false;
+    } else {        
+        for(let word of str.split(" ")){           
+           words.push(word[0].toUpperCase() + word.slice(1));
+        }        
+        return words.join(" ");
+    }
+}
+console.timeEnd('capitalize');
+
+// console.log(removeDuplicates([1,1,2,3,2,3]));
+capitalize('some thing is new one !!');

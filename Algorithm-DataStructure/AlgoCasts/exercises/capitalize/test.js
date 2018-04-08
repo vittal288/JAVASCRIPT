@@ -15,3 +15,11 @@ test('capitalizes the first letter', () => {
     'I Love Breakfast At Bill Miller Bbq'
   );
 });
+
+test('capitalize the first letter of praise',()=>{
+  expect(capitalize('akhila is very very bad wife !!!')).toEqual(`Akhila Is Very Very Bad Wife !!!`);
+})
+
+test('Capitalize method it should accept only string as argument ',()=>{
+  expect(capitalize(1234)).toBeFalsy();
+})
