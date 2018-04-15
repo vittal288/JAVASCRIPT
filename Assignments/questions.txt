@@ -2,3 +2,4 @@ Hacker Rank Questions:
 https://www.hackerrank.com/challenges/reduced-string/problem
 https://www.hackerrank.com/challenges/divisible-sum-pairs/problem
 https://www.hackerrank.com/challenges/kangaroo/problem
+https://www.hackerrank.com/challenges/tree-preorder-traversal/problem

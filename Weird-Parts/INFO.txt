@@ -218,7 +218,7 @@ sayHi('vittal')
 --> I executed you and you execute a function for me which I have provided once you done 
 
 ###CALL, APPLY and BIND 
---> Control the behaviour or this object inside the function executation context is possible throug call(),apply() and bind() methods
+--> Control the behaviour of this object inside the function executation context is possible through call(),apply() and bind() methods
 --> all functions have access to call(), bind() and apply() methods
 
 ### FIRST CLASS FUNCTIONS 

@@ -24,3 +24,25 @@ Example : jest folder_name/test.js --watch OR jest <folder_name> --watch
 --> C and ENTER , to executing the next line like F10 in browser 
 --> repl (either this command, to enter into JS console )
 --> type or keyed the variable you want to inspect that 
+
+
+@@@ COMPLEXITY 
+
+@@ RUNTIME Complexity or Big O Notation{ related PROCESSOR} (see the screen shot for more info screen_shots/run-time-complexity.PNG)
+--> Constant Time : always ONE UNIT OF process time : no algorithm such in the world as of now
+--> Logarthmic Time : log(n)
+--> Linear Complexity: if input parameter increased by one then operation to be perfomed by processor is one time to execute that algorithm : n+1
+    --> while reversing a string 
+--> Qua Linear -->n*log(n)
+--> Quadratic Complexity (n^2):if input parameter increased by one then operation to be perfomed by processor is multiple of n time 
+    --> while performing matrix operation 
+-->Exponential Time (2n)
+
+@@ SPACE COMPLEXITY {Related to MEMORY}
+-->How much memory space is required by doubling the problem set 
+
+
+@@@ MEMOIZATION 
+// HOW TO IMPROVE, fibonacci recursive run time run time complexity : i.e  Memoization 
+// store the result of fib function to some memory or cache,   if fib is called with same parameter in recursive method 
+
