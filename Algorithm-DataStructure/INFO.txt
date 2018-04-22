@@ -46,3 +46,48 @@ Example : jest folder_name/test.js --watch OR jest <folder_name> --watch
 // HOW TO IMPROVE, fibonacci recursive run time run time complexity : i.e  Memoization 
 // store the result of fib function to some memory or cache,   if fib is called with same parameter in recursive method 
 
+
+@@@@ DATA STRUCTURES @@@@
+---> Organazing the information(or data) with opimized runtime complexity for adding, editing and removing data 
+1. STACK (FILO)
+2. QUEUE (FIFO)
+3. LINKED LIST 
+
+@@@ LINKED LIST @@@@@
+---> sample linked list (have a look of screen shot in AlgoCasts/exercises/linkedlist/screenshots/basic-linked-list.PNG)
+const nodeOne ={
+    data:123
+}
+const nodeTwo ={
+    data:246
+}
+
+nodeOne.next = nodeTwo;
+
+@@@ CIRCULAR LINKED LISR @@@
+--> The end of linked is pointing to any one node in the in the list 
+
+
+@@@ GENERATORS @@@
+--> GENERATORS are the special kind of function and executes the functions lines till it encounters the 
+    yeild line ;
+--> Next if same functions calls then yield statement will replace as placeholder for a variable
+
+--> Use of generator is, we can buila for loop to iterate linked list with for ...of loop
+
+function *numbers(){
+    const result = 1+1;
+    return 20+ (yield result);
+}
+
+const generator = numbers();
+console.log(generator.next()) ---> {"value":2, "done":false};
+console.log(generator.next(30)) ---> {"value":50, "done":true};
+
+
+@@@@ TREE @@@@
+--> Tree Traversal, 2 ways we can iterate with tree 
+--> 1. Breadth-First Traversal(screen-shots/tree/breadth-first.png): Traverse each level of tree from left to right 
+--> 2. Depth-First Traversal(screen-shots/tree/depth-first.png): From top(root) to bottom level from left side 
+
+

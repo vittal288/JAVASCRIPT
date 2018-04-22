@@ -11,6 +11,28 @@
 // 4       5
 // Answer: [1, 3, 2]
 
-function levelWidth(root) {}
+// Each index of array is the level of tree and it indicates how many nodes are present inside each level 
+
+function levelWidth(root) {
+
+    let arr = [root, 's'];
+    let counters = [0];
+
+    while (arr.length > 1) {
+
+        let node = arr.shift();
+
+        if (node === 's') {
+            // end of tree level 
+            counters.push(0);
+            arr.push('s');
+        } else {
+            // if we are working with actua node
+            arr.push(...node.children);
+            counters[counters.length - 1]++
+        }
+    }
+    return counters;
+}
 
 module.exports = levelWidth;
