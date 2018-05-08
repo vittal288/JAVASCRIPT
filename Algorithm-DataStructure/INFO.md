@@ -91,3 +91,13 @@ console.log(generator.next(30)) ---> {"value":50, "done":true};
 --> 2. Depth-First Traversal(screen-shots/tree/depth-first.png): From top(root) to bottom level from left side 
 
 
+@@@ BINARY TREE @@@
+--> A left node of tree is less than the parent node value and right node value should be greater than parent node 
+    2
+   / \
+  0   3
+
+@@@ BINARY SEARCH TREE @@@ 
+-->Every node as 2 childrens 
+---> Left node should less than its parent and right node should have greater than parent 
+
