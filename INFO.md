@@ -1,4 +1,7 @@
 # ALL ABOUT JAVASCRIPT
+[HAVE A LOOK HERE](https://www.udemy.com/the-complete-javascript-course/)
+
+
 JS is lightwaight, Cross Platform and OOPS Programming language 
 
 Primitive (not a object)Data types:
@@ -19,17 +22,17 @@ Operator Precedense
 
 ### DATA TYPES
 Javascript by default supports dynamic typing 
-+ # Primitive Datatypes 
++ ### Primitive Datatypes 
     + Number 
     + Boolean
     + String 
     + Undefined
     + Null
-+ # Non Primitive Datatypes 
++ ### Non Primitive Datatypes 
     + Array 
     + Object 
 
-### How JS works behind the scenes 
+## How JS works behind the scenes 
 + By default execution context is GLOBAL 
 + Each Function creates its own execution context on top of Global Execution Context in Execution STACK PASSION
  + [How Execution Context will create for javascript](./Screen-shots/execution-context.png)
@@ -68,3 +71,22 @@ Javascript by default supports dynamic typing
 
  
 
+ ## ADVANCED JavaScript: Objects and Functions
+
++ In JS *EVERYTHING* is an **OBJECT**
++ In JS we have big types of *VALUES* i.e Primitives and Values 
+
+    | PRIMITVIES           | OBJECTS     |
+    | -----------------    |--------------
+    | NUMBERS              | ARRAYS     |
+    | STRINGS              | FUNCTIONS  |
+    | BOOLEANS             | OBJECTS    |
+    | UNDEFINED            | DATES      |
+    | null                 | Wrappers for Numbers,String and Booleans |
+
++ **INHERITANCE** is a concept of creating an object based on another , [for more info](./Screen-shots/inheritance.png)
++ **PROTOTYPE** is an object from which we can implement inheritance and we can add methods and properties to the class or function dynamically 
++ **PROTOTYPE CHAIN** is concept in JS from which we can access the methods and propertes of other object or window or global object using [prototype chain](./Screen-shots/prototype-chain.png) and this is the beauty of JS
+    + Whenever you tried to access a method/prop from a object , JS engines seraches in its prototype object if not found , it will search in its parent till global or window object and this process is called **PROTOTYPE CHAIN**
++ **null** is only object which does not have protype object and thats why it returns an **undefined**
+    
