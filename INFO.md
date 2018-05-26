@@ -2,14 +2,14 @@
 [HAVE A LOOK HERE](https://www.udemy.com/the-complete-javascript-course/)
 
 
-JS is lightwaight, Cross Platform and OOPS Programming language 
+JS is lightweight, Cross Platform and OOPS Programming language 
 
 Primitive (not a object)Data types:
 Number: always a floating value 5.0 
 String
 Boolean
 Undefined: Data type of a variable which does not have any value yet 
-null:Also means non-existant
+null:Also means non existance 
 
 
 JS has Dynamic Typing :
@@ -18,7 +18,7 @@ Type Coercion: convert one type to another: 26+"john"=> 26john
 
 Variable Mutation : Changing the value of variable.
 
-Operator Precedense 
+Operator Precedence 
 
 ### DATA TYPES
 Javascript by default supports dynamic typing 
@@ -76,7 +76,7 @@ Javascript by default supports dynamic typing
 + In JS *EVERYTHING* is an **OBJECT**
 + In JS we have big types of *VALUES* i.e Primitives and Values 
 
-    | PRIMITVIES           | OBJECTS     |
+    | PRIMITIVES           | OBJECTS     |
     | -----------------    |--------------
     | NUMBERS              | ARRAYS     |
     | STRINGS              | FUNCTIONS  |
@@ -89,4 +89,31 @@ Javascript by default supports dynamic typing
 + **PROTOTYPE CHAIN** is concept in JS from which we can access the methods and propertes of other object or window or global object using [prototype chain](./Screen-shots/prototype-chain.png) and this is the beauty of JS
     + Whenever you tried to access a method/prop from a object , JS engines seraches in its prototype object if not found , it will search in its parent till global or window object and this process is called **PROTOTYPE CHAIN**
 + **null** is only object which does not have protype object and thats why it returns an **undefined**
+
+
+### CLOSURES 
+```
+function outerfunction(retirementAge) {
+    var a = ' years left until retirement !';
+    // inner functions
+    return function (YOB) {
+        var age = 2018 - YOB;
+    
+        console.log((retirementAge - age) + a);
+    }
+}
+
+```
+ 1. Inner function has an always access to the variables, parameters of its outer function, event after the outer function has returns (returns from the execution context stack) and this concept is called closure
+ 2. Scope Chain of inner function has always intact with outer function 
+ 3. See pictorially of [CLOSURE](./Screen-shots/closure.png)
+
+ ### BIND,CALL and APPLY
+
+these are the methods of first class functions to explicitly set the value of *this* object in the function 
+1. **call**, method only accepts a object and function parameters i.e *fnName.call(otherObject,params)*
+2. **apply**, this method accepts a object and parameters as an array i.e *fnName.apply(otherObject,[arg1,arg2])*
+3. **bind** , this method accepts a object and parameters as string and it returns a function 
+*fnName.bind(otherObject,params)()*
+    1. Bind method is used to pre set the argument of the function 
     

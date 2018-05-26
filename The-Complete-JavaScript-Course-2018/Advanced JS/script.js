@@ -37,6 +37,8 @@ console.log(mike.lastname);
 
 // OBJECT Create Method i.e Object.create
 
+
+/*
 var personProto = {
     calcAge: function () {
         console.log(2018 - YOB);
@@ -135,8 +137,11 @@ function maxHeartRate(el) {
 var rates = arrayCalc(ages, maxHeartRate);
 console.log(rates);
 
+*/
 
 // FUNCTION returns and FUNCTION 
+
+/*
 function interviewQuestion(job) {
     if (job === 'teacher') {
         return function (name) {
@@ -169,3 +174,83 @@ var question = interviewQuestion()('Mike');
 (function () {
     console.log('2');
 }());
+
+*/ 
+// CLOSURES
+/*
+function reitrement(retirementAge) {
+    var a = ' years left until retirement !';
+    return function (YOB) {
+        var age = 2018 - YOB;
+    
+        console.log((retirementAge - age) + a);
+    }
+}
+
+
+var retirementUS = reitrement(66);
+retirementUS(1988);
+
+// re writing "interviewQuestion"  using closure 
+function interviewQuestion(job) {
+   return function(name){
+    if(job === 'teacher'){
+        console.log('Which Subject do you teach ?, ' + name)
+    }else if(job === ' designer'){
+        console.log(name + ', can you explain what is UX is ?');
+    }else{
+        console.log(name + ' What do you do ?');
+    }
+   }
+}
+
+var interviewTeacher = interviewQuestion('teacher')('Vittal');
+
+
+*/
+
+// BIND, CALL and APPLY
+
+
+
+// example one 
+function manuPulateThis(){
+    console.log(this)
+    console.log(this.name);
+}
+
+var myObj ={
+    name :'vittal'
+}
+
+manuPulateThis();
+manuPulateThis.call(myObj);
+
+// example two 
+
+var john ={
+    name:'Vittal',
+    lastname:'kamkar',
+    getFullName: function (greet,greet2){
+        console.log(greet + this.name +'  ' + this.lastname+ greet2);
+    }
+}
+
+john.getFullName('Hii ');
+
+var otherObj = {
+    name:'Sandy ',
+    lastname:'A'
+}
+
+var otherObj2 = {
+    name:'Sandy 123 ',
+    lastname:'A'
+}
+john.getFullName.call(otherObj,'Hello','  Mice Testing ');
+
+john.getFullName.apply(otherObj,['Hello ',' Good Morning '])
+
+john.getFullName.bind(otherObj2,'Hi There ')(' something ');
+
+
