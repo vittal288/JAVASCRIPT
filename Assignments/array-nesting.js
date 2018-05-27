@@ -1,5 +1,6 @@
 // Consolidate below array items into one array 
 // var givenArray = ['1','2','3',[[4,5,6]],[[[['do this']]]]];
+// output --> ['1','2','3',4,5,6,'do this]
 
 const resultArr = [];
 var clonedArr = [];
