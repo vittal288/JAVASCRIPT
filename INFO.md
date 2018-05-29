@@ -1,6 +1,14 @@
 # ALL ABOUT JAVASCRIPT
 [HAVE A LOOK HERE](https://www.udemy.com/the-complete-javascript-course/)
 
+### Following are the Javascript engines in different browsers 
+1. V8
+2. SpiderMonkey 
+3. JavascriptCore 
+4. Chakra 
+5. Carakan 
+6. KJS and Others 
+
 
 JS is lightweight, Cross Platform and OOPS Programming language 
 
@@ -116,4 +124,53 @@ these are the methods of first class functions to explicitly set the value of *t
 3. **bind** , this method accepts a object and parameters as string and it returns a function 
 *fnName.bind(otherObject,params)()*
     1. Bind method is used to pre set the argument of the function 
+
+
+# ES6 or ES 2015 
+ [ES6 compatibility Check in Modern Browser](https://kangax.github.io/compat-table/es6/)
+
+ *each below concepts are explained in The-Complete-Javascript-Course-2018/ES6 folder*
+1. Variable declarations with *let* and *const*
+2. Blocks and IIFEs
+3. Strings and Template strings ``
+4. Arrow Functions ()=>{}
+5. Destructuring {} : The way of extract data from data structures like array and object 
+6. Arrays(new array methods) : from,find,findIndex
+7. The spread operator ...
+8. Rest and Default parameters 
+9. Maps : The new data structure in ES6 and It is similar to Key value pairs but keys are anything like function,numbers and etc 
+### Advantage of map
+    1. We can use anything as key while creating hash map or object 
+    2. We can iterate with foreach and for...loop easily 
+    3. We can create complex data structure using anything as keys 
+    4. Build in good methods like set,get,size,clear, entries ....
+10. Classes and Subclasses 
+
+**How to use ES6 or ES 2015 in 2016 versions browsers**
+
+#### Variable declarations with *let* and *const*
+variable declares with *var* are function scoped but variables declared with *const and let* are block scoped
+
+### Tempral Dead zone 
+1. If you are trying to access an variable(which are declared using let and const) , you will get an error but not in ES5(variables declared using var) and this situation is called *Tempral Dead Zone*
+2. Variables will hoisted but we cannot able to access before they declare 
+
+### Arrow function
+1. Arrow function does not have *this* keyword i.e just lexical keyword 
+2. Arrow function share the *this* keyword from its surroundings shown below.
+
+**NOTE** : Below clicked event listener will not work for ES5 function expression because *this* keyword will not available in that scope
+```
+const box6 = {
+    position: 1,
+    color: 'Green',
+    clickMe: function () {
+        document.querySelector('.green').addEventListener('click', () => {
+            console.log('This is ' + this.color + ' box at ' + this.position);
+        });
+    }
+}
+box6.clickMe();
+```
+
     

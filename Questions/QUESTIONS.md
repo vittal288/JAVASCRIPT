@@ -7,3 +7,5 @@ var givenArray = [1,2,'Hi',['1','2,['Good Morning']], [[[1,2,3,[1]]]]];
 
 // see the solution in Assignment folder array-nesting.js
 ```
+4. What is child processing in NODEJS
+5. How to process 2GB of data in NODEJS 
