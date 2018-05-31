@@ -383,6 +383,8 @@ console.log(john1);
 
 
 // @@@@ MAPS 
+
+/*
 // Maps are new type of data structure in ES6 and which contains the keys as anything not restrict to only string as like we use in JSON or Object 
 const question = new Map();
 
@@ -430,4 +432,127 @@ for (let [key, value] of question.entries()) {
 const ans = parseInt(prompt('What it the correct answer ?'));
 
 console.log(question.get(ans === question.get('correct')));
+
+*/
+
+
+// @@@@ CLASSES and SUB-CLASSES 
+
+// ES5
+// Create Person class with function constructor using function declaration 
+
+var Person5 = function (name, YOB, job) {
+    this.name = name;
+    this.YOB = YOB;
+    this.job = job;
+}
+
+Person5.prototype.calcAge = function () {
+    return new Date().getFullYear - this.YOB;
+}
+
+var john5 = new Person5('John', 1988, 'TL');
+
+
+
+
+
+
+// ES6 
+
+// we can add only methods to classes not the properties 
+// inheriting properties using object instances is not the best practices,so it is avoided in ES6
+/*
+class Person6 {
+    constructor(name, YOB, job) {
+        this.name = name;
+        this.YOB = YOB;
+        this.job = job;
+    }
+
+    calcAge() {
+        return new Date().getFullYear - this.YOB;
+    }
+
+    //static methods, are normal methods and we can invoke them using class keyword not with instance of the class because they are attached with the class
+
+    static greeting() {
+        console.log('ES6 Alert from static method !!!');
+    }
+}
+
+const john6 = new Person6('John', 1988, 'TL');
+
+// accessing from class name
+Person6.greeting();
+
+// SUBCLASSES : are used to implement inheritance 
+
+// ES5 : Inheritance
+// SUPERCLASS
+function Person(name, YOB, job) {
+    this.name = name;
+    this.YOB = YOB;
+    this.job = job;
+    this.calcAge = function () {
+        return (new Date().getFullYear()) - YOB;
+    }
+}
+
+Person.prototype.getName = function () {
+    return this.name;
+}
+
+// SUBCLASS
+function Athlete(olympics, medals, wonMedals) {
+    this.olympics = olympics;
+    this.medals = medals;
+    this.wonMedals = wonMedals;
+}
+
+// Inherit Superclass properties and methods using prototype 
+Athlete.prototype = new Person('Vittal', 1988, 'Sports');
+
+const vittal = new Athlete('Played', 6, 10);
+console.log(vittal.calcAge());
+console.log(vittal.getName());
+console.log(vittal);
+*/
+
+
+// ES6 
+
+class Person6 {
+    constructor(name,YOB,job){
+        this.name = name;
+        this.YOB = YOB;
+        this.job = job;
+    }
+
+    calcAge(){
+       console.log((new Date().getFullYear()) - this.YOB);
+    }
+}
+
+
+
+class Athlete6 extends Person6{
+    constructor(name,YOB,job, medals,olympics){
+        //super method will invoke the Superclass's constructor method to access its properties 
+        super(name,YOB,job);
+
+        this.medals = medals;
+        this.olympics = olympics;
+    }
+
+    wonMedals(){
+        this.medals++;
+        console.log(this.medals);
+    }
+}
+
+const john = new Athlete6('John',1988,'Swimmer',10,'Played');
+john.calcAge();
+john.wonMedals();
+
 
