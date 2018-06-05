@@ -138,7 +138,9 @@ these are the methods of first class functions to explicitly set the value of *t
 6. Arrays(new array methods) : from,find,findIndex
 7. The spread operator ...
 8. Rest and Default parameters 
-9. Maps : The new data structure in ES6 and It is similar to Key value pairs but keys are anything like function,numbers and etc 
+9. Maps : The new data structure in ES6 and It is similar to Key value pairs but keys are anything like 
+function,numbers and etc 
+10. Promises 
 ### Advantage of map
     1. We can use anything as key while creating hash map or object 
     2. We can iterate with foreach and for...loop easily 
@@ -173,4 +175,36 @@ const box6 = {
 box6.clickMe();
 ```
 
+
+### WEB API
+What are Wen API?
+Web API are utility methods which javascript engine has access to them to implement features in the application
+For Example geolocation, setTimeout,localStorage,sessionStorage,XMLHttpRequest and lot more
+
+### ASYNCHRONOUS in JAVASCRIPT 
+By Default JS executes the code synchronously and there are cases where it executes asynchronously using event loop and message queue.
+
+
+[What is synch and asynch](./Screen-shots/synch-asynch-js.png)
+1. Synchronous means one by one at a time(it will finish one and takes other)
+2. [How Asynch code exeuctes behind the scene](./Screen-shots/Event-loop-Message-queue.png) 
+
+### PROMISES
+**Promises are nothing but**
+* Object that keep track about whether certain event has happened or not;
+* Determines what happens after event has happened;
+* Implements the concept of a future value that we're expecting 
+
+**PROMISE STATES**
+
+[See Here Promise States](./Screen-shots/promise-states.png)
+
+### ASYNC and AWAIT
+* async and await are the feature of ES8(ES2017)
+* async and await are designed to consume the promises(because of consumptions of promise are quite challenging and difficult to manage);
+* async function always returns a promise 
+* there is no separate method to handle the erros in ASYNCH AWAIT like catch block, so we have to execute asynch await code in try catch block  
+
+### AJAX and FETCH 
+* fetch is JS feature and it allows to communicate between the server and client through API like AJAX
     

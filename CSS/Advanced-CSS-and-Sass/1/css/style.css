@@ -1,0 +1,196 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+/* universal selector*/
+*{
+    margin: 0;
+    padding: 0;
+    /*for box modelling margin and padding will not add to calculate total width and total height of the comp*/
+    box-sizing: border-box;
+}
+
+/*we are using body tag to define the font related stuffs because body is parent to all elements and it inherits to all its children*/
+body{
+    font-family: 'Lato',sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color:#777;
+    padding: 30px;
+}
+
+.header{
+    /*vh, view port height, 95% of the view port height*/
+    height: 95vh;
+    /* for gradient will use background-image property, but here we used for bg image so we we are using liner-gre to stay top on the image */
+    background-image: linear-gradient(
+            to right bottom,
+            #7ed56fa8,
+            #28b485), 
+            url(../img/hero.jpg);
+    background-size: cover;/*covers the entire box of the component*/
+    background-position: top;/*keep background image will stay back at the top/bottom/center it will shrink as screen resizes from top */
+    position: relative;
+    clip-path: polygon(0 0,100% 0,100% 70vh,0 100%);
+    /*clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);*/
+}
+
+.logo-box{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo{
+    height: 30px;
+    /*width automatically browser will calculate */
+}
+
+/*keep text box in the middel of the page*/
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;/*all text components like, span,anchor tag and buttons will align center of this box*/
+}
+.heading-primary{
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 60px;
+}
+.heading-primary-main{
+    display: block;
+    font-size: 60px;
+    font-weight: 400px;
+    letter-spacing: 35px;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    
+    
+    
+    /*
+    animation-iteration-count: 2;
+    animation-delay: 1s;
+    */
+
+}
+.heading-primary-sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    /* animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out; */
+    animation: moveInRight 2s ease-out;
+}
+
+/*animation */
+
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        /*from its original place to go back 100px from x direction */
+        transform: translateX(-100px);
+    }
+    80%{
+        color: rgba(0, 255, 234, 0.993);
+        transform: translateX(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        /*from its original place to go front 100px from x direction */
+        transform: translateX(100px);
+    }
+
+    80%{
+        transform:translateX(-10px)
+    }
+    100%{
+        opacity:1 ;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes moveInBottom{
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    80%{
+
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.btn:link,
+.btn:visited{
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    display:inline-block;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 10px 20px rgba(0,0,0,.2);
+}
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+}
+.btn-white{
+    background-color: #fff;
+    color: #777;
+}
+
+/* pseudo elements is child element of its selector */
+.btn::after{
+    content: "";
+    display:inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+    
+}
+
+.btn-white::after{
+    background-color: #fff;
+}
+/*on button hover ,style the child button using pseudo element i.r after*/
+.btn:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated{
+    animation: moveInBottom .5s ease-out  .75s;
+    /*animation 0% style will apply */
+    animation-fill-mode: backwards;
+}
