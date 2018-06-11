@@ -98,5 +98,19 @@ IMPORTANTANCE --> CSS SPECIFICITY --> Order Of Code Written
 * Different flow of the element (Normal flow, float{left and right} and Positioning flow{absolute and relative}) [for more info](../Screen-shots/different-flow-of-element.png)
 
 
+### SASS (CSS Preprocessor)
+What all features are available in SASS
+* **Variables :** we can create reusable variables for colors,width and height and font sizes 
+* **Nesting :**  we can nest the CSS selectors to write less code
+* **Operators :**  for mathematical operations in sass code 
+* **Partials and Imports :**  this is most beauty of SASS and which helps to modularise the code and segregate into different files and collate it into one file 
+* **Mixins :** We can write reusable peace of CSS code 
+* **Functions :** this is similar to mixins but which returns an value from block of code 
+* **Extends :** to make different selectors which inherit the declarations that all are common to all of them 
+* **Control Directives :** for writing complex code which includes loops and if conditions 
+
+*Difference between SASS and SCSS* there is no difference at all, SASS which will not use flower brackets and semi colons which works on indentations but SCSS uses flower brackets [see here](../Screen-shots/sass-scss.png)
+
+
 
 

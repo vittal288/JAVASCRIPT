@@ -1,5 +1,8 @@
 {
-    "scripts": {
-      "test": "jest --watchAll"
-    }
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "dependencies": {
+    "chai": "^4.1.2"
   }
+}
