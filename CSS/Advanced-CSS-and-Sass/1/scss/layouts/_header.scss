@@ -1,0 +1,33 @@
+.header{
+    /*vh, view port height, 95% of the view port height*/
+    height: 95vh;
+    /* for gradient will use background-image property, but here we used for bg image so we we are using liner-gre to stay top on the image */
+    background-image: linear-gradient(
+            to right bottom,
+            rgba($color-primary-light,0.8),
+            rgba($color-primary-dark,0.8)), 
+            url(../img/hero.jpg);
+    background-size: cover;/*covers the entire box of the component*/
+    background-position: top;/*keep background image will stay back at the top/bottom/center it will shrink as screen resizes from top */
+    position: relative;
+    clip-path: polygon(0 0,100% 0,100% 70vh,0 100%);
+    /*clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);*/
+    // & is used for extend: this will copy the main path of i.e, in this case .header
+    &__logo-box{
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    &__logo{
+        height: 3.5rem;
+        /*width automatically browser will calculate */ 
+    }
+    &__text-box{
+        /*keep text box in the middle of the page*/
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;/*all text components like, span,anchor tag and buttons will align center of this box*/
+    }
+}
