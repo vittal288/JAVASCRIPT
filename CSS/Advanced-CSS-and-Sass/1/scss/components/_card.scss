@@ -1,0 +1,166 @@
+.card{
+    //FUNCTIONALITY 
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    cursor: pointer;
+    position: relative;
+    height: 50rem;
+    
+   
+    
+    &__side{
+        color: #fff;
+        font-size: 2rem;
+        height: 50rem;
+        transition: all .8s ease;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        backface-visibility: hidden;
+        border-radius: 2px;
+        
+        
+
+        &--front{
+            background-color:$color-white;
+            box-shadow: 0 1.5rem 40px rgba($color-grey-dark,.6);
+        }
+        
+        &--back{
+            transform: rotateY(180deg);
+            box-shadow: 0 1.5rem 40px rgba($color-grey-dark,.6);
+            &-1{
+                background-image: linear-gradient(to right bottom, $color-secondary-light,$color-secondary-dark);
+            }
+            &-2{
+                background-image: linear-gradient(to right bottom, $color-primary-light,$color-primary-dark);
+            }
+            &-3{
+                background-image: linear-gradient(to right bottom, $color-tertiary-light,$color-tertiary-dark);
+            }
+        }
+        
+    }
+    
+    &:hover &__side--front{
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back{
+        transform: rotateY(0deg);
+    }
+
+
+    // FRONT SIDE STYLING 
+    &__picture{
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+        overflow: hidden;// image is overflowing the parent container hence border-radius was not visible so added overflow hidden
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+
+        &-1{
+            background-image: linear-gradient(to right bottom, $color-secondary-light,$color-secondary-dark),
+                              url(../img/nat-5.jpg);
+        }
+        &-2{
+            background-image: linear-gradient(to right bottom, $color-primary-light,$color-primary-dark),
+                              url(../img/nat-6.jpg);
+        }
+        &-3{
+            background-image:linear-gradient(to right bottom, $color-tertiary-light,$color-tertiary-dark), 
+                             url(../img/nat-7.jpg);
+        }
+    }
+
+    &__heading{
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color:$color-white;
+        position: absolute;
+        top:12rem;
+        right: 2rem;
+        text-align: right;
+        width: 70%;
+
+    }
+
+    &__heading-span{
+        padding: 1rem 1.5rem;
+        padding: 1rem 1.5rem;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;// keeps the equal padding space around the box
+        &--1{
+            background-image: linear-gradient(
+                                                to right bottom,
+                                                rgba($color-secondary-light,.85),
+                                                rgba($color-secondary-dark,.85)
+                                            );
+        }
+        &--2{
+            background-image: linear-gradient(
+                                                to right bottom,
+                                                rgba($color-primary-light,.85),
+                                                rgba($color-primary-dark,.85)
+                                            );
+        }
+        &--3{
+            background-image: linear-gradient(
+                                                to right bottom,
+                                                rgba($color-tertiary-light,.85),
+                                                rgba($color-tertiary-dark,.85)
+                                            );
+        }
+    }
+
+    &__details{
+        padding: 3rem;
+        ul{
+            list-style: none;
+            width: 80%;
+            margin: 0px auto;// this is apply only for block level elements 
+            li{
+                color: #000;
+                text-align: center;
+                padding: 1rem;
+                font-size: 1.5rem;
+                &:not(:last-child){
+                    border-bottom: 1px solid $color-grey-light-2;
+                }
+            }
+        }
+    }
+
+
+    // BACK SIDE STYLING 
+    &__cta{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+
+        &__price-box{
+           
+            text-align: center;
+            color: $color-white;
+            margin-bottom: 8rem;
+
+            &-only{
+                font-size: 1.4rem;
+                text-transform: uppercase;
+            }
+            &-value{
+                font-size: 6rem;
+                font-weight: 100;
+            }
+        }
+    }
+}

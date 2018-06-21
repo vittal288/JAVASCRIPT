@@ -10,6 +10,7 @@
     background-size: cover;/*covers the entire box of the component*/
     background-position: top;/*keep background image will stay back at the top/bottom/center it will shrink as screen resizes from top */
     position: relative;
+    -webkit-clip-path: polygon(0 0,100% 0,100% 70vh,0 100%);
     clip-path: polygon(0 0,100% 0,100% 70vh,0 100%);
     /*clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);*/
     // & is used for extend: this will copy the main path of i.e, in this case .header
