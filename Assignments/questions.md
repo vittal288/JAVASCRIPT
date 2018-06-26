@@ -17,6 +17,12 @@
 6. What is the closure and what are the advantages and disadvantages of closures and how it leads to memory leak.
     1. [closure memory leaks ](https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/)
 7. How to create immutable objects(immutable.js through library but how it works internally) in Javascript(because object is reference type,reserved a same memory through it entire life cycle)
+8. Reorder the given array as following passion (right side even element and odd elements left side) without using temporary array 
+```
+GIVEN ARRAY [1,2,4,5,7,9,6]
+O/p --> [1,5,7,9,2,4,6]
+```
+9. Reverse the given phrase "Welcome to possible" to "possible to welcome" without using array built in array or array methods 
 
 # HTML
 1. How to refresh the page using meta tag and what is the use of meta tag 

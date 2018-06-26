@@ -1,6 +1,6 @@
 // gets a new object fo G$, (this architectire allows us to not to use 'new' keyword to create a instance of Greetr lib)
 var g = G$('Vittal','Kamkar');
-// use our chaingable method 
+// use our chainable method 
 g.greet().setLang('es').greet(true).log();
 
 
