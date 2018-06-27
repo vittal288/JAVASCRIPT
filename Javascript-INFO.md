@@ -240,3 +240,16 @@ By Default JS executes the code synchronously and there are cases where it execu
 
 ### DESIGN PATTERNS
 * Module Design Pattern
+
+### Usage of "use strict"
+* It throws exceptions for common coding mistakes like improper closing of semi colons and 
+* It Throws an error for unsafe actions in the page 
+* if you write like below statements it will throw an error in strict mode
+```
+x =10;
+console.log(x); // uncaught reference error 
+
+```
+* strict mode allows to write secure JS code 
+* It shows as en error for bad syntax code 
+

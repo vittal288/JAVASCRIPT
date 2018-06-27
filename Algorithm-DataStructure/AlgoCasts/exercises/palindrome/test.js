@@ -36,6 +36,12 @@ test('"vittal" is not a palindrom',()=>{
   expect(palindrome('vittal')).toBeFalsy();
 })
 
-test('"abbabba" is not a palindrom',()=>{
+test('"abbabba" is a palindrom',()=>{
   expect(palindrome('abbabba')).toBeTruthy();
+});
+
+
+test('"CIVIC" is a palindrom',()=>{
+  expect(palindrome('CIVIC')).toBeTruthy();
 })
+

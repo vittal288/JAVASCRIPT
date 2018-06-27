@@ -9,18 +9,18 @@
 
 
 // SOLUTION TWO using every() method 
-function palindrome(str){
-    // using every method of array 
-    // every() method return true if all condition yelilds true or returns a false 
-    // every() method returns false if all conditions yeilds  as false  or returns true 
+// function palindrome(str) {
+//     // using every method of array 
+//     // every() method return true if all condition yelilds true or returns a false 
+//     // every() method returns false if all conditions yeilds  as false  or returns true 
 
-    return str.split("").every((char,i)=>{
-        // here we are comparing first element of array and last element of array and repeats same till it completes entire array elements 
-        // if below conditions returns true for all comparison then every method returns true 
-        return char === str[str.length -1 -i];
-    })
+//     return str.split("").every((char, i) => {
+//         // here we are comparing first element of array and last element of array and repeats same till it completes entire array elements 
+//         // if below conditions returns true for all comparison then every method returns true 
+//         return char === str[str.length - 1 - i];
+//     })
 
-}
+// }
 
 
 
@@ -33,4 +33,25 @@ function palindrome(str){
 //     return str.split("").reverse().join("");
 // }
 
+
+
+// SOLUTION THREE
+// with two counters and comparing extreme items of an array 
+function palindrome(str) {
+    let palindrome;
+    let arr = str.split("");
+    var j = arr.length;
+    for (var i = 0; i < j; i++) {
+        j--;
+        if (i !== j) {
+            if (arr[i] === arr[j]) {
+                palindrome =true;
+            }else{
+                palindrome = false;
+                return;
+            }
+        }
+    }
+    return palindrome;
+}
 module.exports = palindrome;
