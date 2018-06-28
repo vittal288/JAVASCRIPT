@@ -1,1 +1,298 @@
-<h1>Welcome to JS Page<h1>
+<h1><a id="ALL_ABOUT_JAVASCRIPT_0"></a>ALL ABOUT JAVASCRIPT</h1>
+<p><a href="https://www.udemy.com/the-complete-javascript-course/">HAVE A LOOK HERE</a></p>
+<h3><a id="Following_are_the_Javascript_engines_in_different_browsers_3"></a>Following are the Javascript engines in different browsers</h3>
+<ol>
+<li>V8</li>
+<li>SpiderMonkey</li>
+<li>JavascriptCore</li>
+<li>Chakra</li>
+<li>Carakan</li>
+<li>KJS and Others</li>
+</ol>
+<p>JS is lightweight, Cross Platform and OOPS Programming language</p>
+<p>Primitive (not a object)Data types:<br>
+Number: always a floating value 5.0<br>
+String<br>
+Boolean<br>
+Undefined: Data type of a variable which does not have any value yet<br>
+null:Also means non existance</p>
+<p>JS has Dynamic Typing :</p>
+<p>Type Coercion: convert one type to another: 26+“john”=&gt; 26john</p>
+<p>Variable Mutation : Changing the value of variable.</p>
+<p>Operator Precedence</p>
+<h3><a id="DATA_TYPES_30"></a>DATA TYPES</h3>
+<p>Javascript by default supports dynamic typing</p>
+<ul>
+<li>
+<h3><a id="Primitive_Datatypes_32"></a>Primitive Datatypes</h3>
+<ul>
+<li>Number</li>
+<li>Boolean</li>
+<li>String</li>
+<li>Undefined</li>
+<li>Null</li>
+</ul>
+</li>
+<li>
+<h3><a id="Non_Primitive_Datatypes_38"></a>Non Primitive Datatypes</h3>
+<ul>
+<li>Array</li>
+<li>Object</li>
+</ul>
+</li>
+</ul>
+<h2><a id="How_JS_works_behind_the_scenes_42"></a>How JS works behind the scenes</h2>
+<ul>
+<li>
+<p>By default execution context is GLOBAL</p>
+</li>
+<li>
+<p>Each Function creates its own execution context on top of Global Execution Context in Execution STACK PASSION</p>
+</li>
+<li>
+<p><a href="./Screen-shots/execution-context.png">How Execution Context will create for javascript</a></p>
+</li>
+<li>
+<p><a href="https://www.udemy.com/the-complete-javascript-course/learn/v4/t/lecture/5869128?start=0">For More Info</a></p>
+</li>
+<li>
+<p><strong>Execution Context</strong> : It contains : When function called execuction context will create in two phase</p>
+<h3><a id="CREATION_PHASE_50"></a>CREATION PHASE</h3>
+<ul>
+<li>1.1 <strong>Variable Object(VO)</strong></li>
+<li>1.2 <strong>Creation of Scope Chain</strong></li>
+<li>1.3 <strong>Determine the value of <em>this</em> varible in that scope</strong></li>
+</ul>
+</li>
+</ul>
+<pre><code>1.1 **Creation of Variable Object**
++ The Orgument object is created, containing all the arguments were passed into the function 
++ Code is scanned for each function: For each function, property is created in the Variable Object, pointing to function 
++ Code is Scanned for variable decleration: For each variable property is created in Variable Object and set to undefined 
++ variables declarations goes in the top
++ BOTH ABOVE POINTS CONSIDERED AS **HOISTING**
+
+*hoisting example*
+```
+var text ='something';
+function invoke(){
+    var test ='adsadad';
+    if(true){
+        console.log('Hii', text);
+        var text = ' new thing';
+    }
+}
+invoke();
+```
+//outout is undefined because local variable declaration takes top priority and due to hoisting, variable declaration goes in the top of the respective block
+
+1.2 **SCOPE CHAIN**: 
++ Where we can access the functions and variables
++ **Each New function creates a scope** but not with if,else and while block
++ **Lexical Scoping** :A Function that lexically within another function and get access to the scope of outer function, 
++ [for more Info](./Screen-shots/scope-chain.png)
++ Execution Phase means, how the functions are called and Scope chain or lexical scope is how are the functions placed in the code [Have a look on Difference between Execution Phase and Scope Chain](./Screen-shots/execution-context-and-scope-chain.png)
+
+1.3 ***THIS* KEYWORD** 
++ **Regular function call** *this* points to at global object or window object 
++ **Method call**: *this* points to the object, that is calling the method
++ *The **this** keyword is not assigned a any value, until a function where it is defined actually called*
++ *this* assgined a value as soon as object invoked a method 
+
+### EXECUTION PHASE
++ In Execution phase, the code of the function that generated the current execution context will run line by line 
+</code></pre>
+<h2><a id="ADVANCED_JavaScript_Objects_and_Functions_96"></a>ADVANCED JavaScript: Objects and Functions</h2>
+<ul>
+<li>
+<p>In JS <em>EVERYTHING</em> is an <strong>OBJECT</strong></p>
+</li>
+<li>
+<p>In JS we have big types of <em>VALUES</em> i.e Primitives and Values</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>PRIMITIVES</th>
+<th>OBJECTS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NUMBERS</td>
+<td>ARRAYS</td>
+</tr>
+<tr>
+<td>STRINGS</td>
+<td>FUNCTIONS</td>
+</tr>
+<tr>
+<td>BOOLEANS</td>
+<td>OBJECTS</td>
+</tr>
+<tr>
+<td>UNDEFINED</td>
+<td>DATES</td>
+</tr>
+<tr>
+<td>null</td>
+<td>Wrappers for Numbers,String and Booleans</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>INHERITANCE</strong> is a concept of creating an object based on another , <a href="./Screen-shots/inheritance.png">for more info</a></p>
+</li>
+<li>
+<p><strong>PROTOTYPE</strong> is an object from which we can implement inheritance and we can add methods and properties to the class or function dynamically</p>
+</li>
+<li>
+<p><strong>PROTOTYPE CHAIN</strong> is concept in JS from which we can access the methods and propertes of other object or window or global object using <a href="./Screen-shots/prototype-chain.png">prototype chain</a> and this is the beauty of JS</p>
+<ul>
+<li>Whenever you tried to access a method/prop from a object , JS engines seraches in its prototype object if not found , it will search in its parent till global or window object and this process is called <strong>PROTOTYPE CHAIN</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>null</strong> is only object which does not have protype object and thats why it returns an <strong>undefined</strong></p>
+</li>
+</ul>
+<h3><a id="CLOSURES_119"></a>CLOSURES</h3>
+<pre><code>function outerfunction(retirementAge) {
+    var a = ' years left until retirement !';
+    // inner functions
+    return function (YOB) {
+        var age = 2018 - YOB;
+    
+        console.log((retirementAge - age) + a);
+    }
+}
+
+</code></pre>
+<ol>
+<li>Inner function has an always access to the variables, parameters of its outer function, event after the outer function has returns (returns from the execution context stack) and this concept is called closure</li>
+<li>Scope Chain of inner function has always intact with outer function</li>
+<li>See pictorially of <a href="./Screen-shots/closure.png">CLOSURE</a></li>
+</ol>
+<h3><a id="BINDCALL_and_APPLY_136"></a>BIND,CALL and APPLY</h3>
+<p>these are the methods of first class functions to explicitly set the value of <em>this</em> object in the function</p>
+<ol>
+<li><strong>call</strong>, method only accepts a object and function parameters i.e <em>fnName.call(otherObject,params)</em></li>
+<li><strong>apply</strong>, this method accepts a object and parameters as an array i.e <em>fnName.apply(otherObject,[arg1,arg2])</em></li>
+<li><strong>bind</strong> , this method accepts a object and parameters as string and it returns a function<br>
+<em>fnName.bind(otherObject,params)()</em>
+<ol>
+<li>Bind method is used to pre set the argument of the function</li>
+</ol>
+</li>
+</ol>
+<h1><a id="ES6_or_ES_2015_146"></a>ES6 or ES 2015</h1>
+<p><a href="https://kangax.github.io/compat-table/es6/">ES6 compatibility Check in Modern Browser</a></p>
+<p><em>each below concepts are explained in The-Complete-Javascript-Course-2018/ES6 folder</em></p>
+<ol>
+<li>Variable declarations with <em>let</em> and <em>const</em></li>
+<li>Blocks and IIFEs</li>
+<li>Strings and Template strings ``</li>
+<li>Arrow Functions ()=&gt;{}</li>
+<li>Destructuring {} : The way of extract data from data structures like array and object</li>
+<li>Arrays(new array methods) : from,find,findIndex</li>
+<li>The spread operator …</li>
+<li>Rest and Default parameters</li>
+<li>Maps : The new data structure in ES6 and It is similar to Key value pairs but keys are anything like<br>
+function,numbers and etc</li>
+<li>Promises</li>
+</ol>
+<h3><a id="Advantage_of_map_161"></a>Advantage of map</h3>
+<pre><code>1. We can use anything as key while creating hash map or object 
+2. We can iterate with foreach and for...loop easily 
+3. We can create complex data structure using anything as keys 
+4. Build in good methods like set,get,size,clear, entries ....
+</code></pre>
+<ol start="10">
+<li>Classes and Subclasses</li>
+</ol>
+<p><strong>How to use ES6 or ES 2015 in 2016 versions browsers</strong></p>
+<h4><a id="Variable_declarations_with_let_and_const_170"></a>Variable declarations with <em>let</em> and <em>const</em></h4>
+<p>variable declares with <em>var</em> are function scoped but variables declared with <em>const and let</em> are block scoped</p>
+<h3><a id="Tempral_Dead_zone_173"></a>Tempral Dead zone</h3>
+<ol>
+<li>If you are trying to access an variable(which are declared using let and const) , you will get an error but not in ES5(variables declared using var) and this situation is called <em>Tempral Dead Zone</em></li>
+<li>Variables will hoisted but we cannot able to access before they declare</li>
+</ol>
+<h3><a id="Arrow_function_177"></a>Arrow function</h3>
+<ol>
+<li>Arrow function does not have <em>this</em> keyword i.e just lexical keyword</li>
+<li>Arrow function share the <em>this</em> keyword from its surroundings shown below.</li>
+</ol>
+<p><strong>NOTE</strong> : Below clicked event listener will not work for ES5 function expression because <em>this</em> keyword will not available in that scope</p>
+<pre><code>const box6 = {
+    position: 1,
+    color: 'Green',
+    clickMe: function () {
+        document.querySelector('.green').addEventListener('click', () =&gt; {
+            console.log('This is ' + this.color + ' box at ' + this.position);
+        });
+    }
+}
+box6.clickMe();
+</code></pre>
+<h3><a id="WEB_API_196"></a>WEB API</h3>
+<p>What are Wen API?<br>
+Web API are utility methods which javascript engine has access to them to implement features in the application<br>
+For Example geolocation, setTimeout,localStorage,sessionStorage,XMLHttpRequest and lot more</p>
+<h3><a id="ASYNCHRONOUS_in_JAVASCRIPT_201"></a>ASYNCHRONOUS in JAVASCRIPT</h3>
+<p>By Default JS executes the code synchronously and there are cases where it executes asynchronously using event loop and message queue.</p>
+<p><a href="./Screen-shots/synch-asynch-js.png">What is synch and asynch</a></p>
+<ol>
+<li>Synchronous means one by one at a time(it will finish one and takes other)</li>
+<li><a href="./Screen-shots/Event-loop-Message-queue.png">How Asynch code exeuctes behind the scene</a></li>
+</ol>
+<h3><a id="PROMISES_209"></a>PROMISES</h3>
+<p><strong>Promises are nothing but</strong></p>
+<ul>
+<li>Object that keep track about whether certain event has happened or not;</li>
+<li>Determines what happens after event has happened;</li>
+<li>Implements the concept of a future value that we’re expecting</li>
+</ul>
+<p><strong>PROMISE STATES</strong></p>
+<p><a href="./Screen-shots/promise-states.png">See Here Promise States</a></p>
+<h3><a id="ASYNC_and_AWAIT_219"></a>ASYNC and AWAIT</h3>
+<ul>
+<li>async and await are the feature of ES8(ES2017)</li>
+<li>async and await are designed to consume the promises(because of consumptions of promise are quite challenging and difficult to manage);</li>
+<li>async function always returns a promise</li>
+<li>there is no separate method to handle the erros in ASYNCH AWAIT like catch block, so we have to execute asynch await code in try catch block</li>
+</ul>
+<h3><a id="AJAX_and_FETCH_225"></a>AJAX and FETCH</h3>
+<ul>
+<li>fetch is JS feature and it allows to communicate between the server and client through API like AJAX</li>
+</ul>
+<h3><a id="MEMORY_LEAKS_228"></a>MEMORY LEAKS</h3>
+<p><em>there are 4 ways to leak the memory in JS <a href="https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/">check here</a></em></p>
+<ol>
+<li>Accidental Global variables</li>
+<li>Forgotten timer or callbacks</li>
+<li>Out of DOM reference</li>
+<li>Closures</li>
+</ol>
+<h3><a id="INHERITANCE_237"></a>INHERITANCE</h3>
+<ol>
+<li>JS Supports Multi level inheritance</li>
+</ol>
+<h3><a id="DESIGN_PATTERNS_240"></a>DESIGN PATTERNS</h3>
+<ul>
+<li>Module Design Pattern</li>
+</ul>
+<h3><a id="Usage_of_use_strict_243"></a>Usage of “use strict”</h3>
+<ul>
+<li>It throws exceptions for common coding mistakes like improper closing of semi colons and</li>
+<li>It Throws an error for unsafe actions in the page</li>
+<li>if you write like below statements it will throw an error in strict mode</li>
+</ul>
+<pre><code>x =10;
+console.log(x); // uncaught reference error 
+
+</code></pre>
+<ul>
+<li>strict mode allows to write secure JS code</li>
+<li>It shows as en error for bad syntax code</li>
+</ul>
