@@ -307,6 +307,16 @@ var boxes = document.querySelectorAll('.box');
 
 const all = [h1,...boxes];
 
+// add array items
+function sum(a,b,c,d){
+  console.log(a,b);
+}
+
+var arr = [1,2,3,4];
+
+
+var add = sum(...arr);
+
 // convert node list to array 
 Array.from(all).forEach( el => el.style.color ='purple');
 

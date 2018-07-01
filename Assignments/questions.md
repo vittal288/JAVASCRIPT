@@ -1,4 +1,4 @@
-### Hacker Rank Questions:
+ ### Hacker Rank Questions:
 * [Reduce String](https://www.hackerrank.com/challenges/reduced-string/problem)
 * [Divisible Sum Pairs](https://www.hackerrank.com/challenges/divisible-sum-pairs/problem)
 * [Kangroo Prob](https://www.hackerrank.com/challenges/kangaroo/problem)
@@ -25,6 +25,11 @@ O/p --> [1,5,7,9,2,4,6]
 9. Reverse the given phrase "Welcome to possible" to "possible to welcome" without using array built in array or array methods 
 
 10. What is the deep copy and shallow copy 
+11. Implement custom methods cal,apply and bind 
+12. What is the use of arrowed functions in ES6, spread operators 
+13. What are the difference between constructor methods and prototypes methods in js and how to implement in typescript  
+14. how to create multi threading in js 
+15. how to execute js code parellel and series 
 
 # HTML
 1. How to refresh the page using meta tag and what is the use of meta tag 
