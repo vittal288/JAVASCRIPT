@@ -84,3 +84,5 @@ O/p --> [1,5,7,9,2,4,6]
     | -------------------------------------------------|--------------
     | This is ready made framework to develope an SPA  | This is just a library, for rotuer and       |
       and it comes with router part as well 
+
+

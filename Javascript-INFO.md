@@ -133,6 +133,26 @@ function outerfunction(retirementAge) {
  1. Inner function has an always access to the variables, parameters of its outer function, event after the outer function has returns (returns from the execution context stack) and this concept is called closure
  2. Scope Chain of inner function has always intact with outer function 
  3. See pictorially of [CLOSURE](./Screen-shots/closure.png)
+ 4. We can use closure to define the modular design pattern, see example in *The complete-javascript-cosurse-2018/Budget-App*
+    
+### Drawbacks or disadvantages of clsoure 
+1. Memory leaks :
+*In below example every 10ms **outer** function is calling and but **inner** function is just holding an reference of outer or global variable and is not invoking but as we know that funciton is also **invokable object** and it allocates the momory and which is of no use so then it leads to memory leak*
+```
+var res;
+function outer(){
+    var oldresp = res;
+    function inner(){
+        if(oldresp) return 'something';
+    }
+
+    return function() {}
+}
+
+setTimeout(()=>{
+    res = outer();
+},100)
+```
 
  ### BIND,CALL and APPLY
 
@@ -231,7 +251,23 @@ By Default JS executes the code synchronously and there are cases where it execu
 1. Accidental Global variables 
 2. Forgotten timer or callbacks
 3. Out of DOM reference 
-4. Closures 
+4. Closures : *In below example every 10ms **outer** function is calling and but **inner** function is just holding an reference of outer or global variable and is not invoking but as we know that funciton is also **invokable object** and it allocates the momory and which is of no use so then it leads to memory leak*
+```
+var res;
+function outer(){
+    var oldresp = res;
+    function inner(){
+        if(oldresp) return 'something';
+    }
+
+    return function() {}
+}
+
+setTimeout(()=>{
+    res = outer();
+},100)
+```
+
 
 
 
@@ -252,4 +288,17 @@ console.log(x); // uncaught reference error
 ```
 * strict mode allows to write secure JS code 
 * It shows as en error for bad syntax code 
+
+
+### Encapsulation :
+* To wrap the object or data or variables in one unit and defines the which property is accessable to outside the world publically of the block or class or keep in private to the class and this mechanism called encapsualtion ....
+```
+class budget{
+    private fname;
+    public address;
+    public getfullname= function(){
+
+    }
+}
+```
 
