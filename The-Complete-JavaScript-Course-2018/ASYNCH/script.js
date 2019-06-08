@@ -191,13 +191,15 @@ async function getGITHubReposAW(keyword){
     }
 }
 
-getGITHubReposAW('Angular').then((result)=>{
+getGITHubReposAW('Angular')
+
+.then((result)=>{
     console.log(`Details about first repository ID: ${result.id} and number of forks on this repo are ${result.forks}`);
 })
 .catch(err => console.log(err));
 
 
-getGITHubReposAW('NodejS').then((result)=>{
-    console.log(`Details about first repository ID: ${result.id} and number of forks on this repo are ${result.forks}`);
-})
-.catch(err => console.log(err));
+// getGITHubReposAW('NodejS').then((result)=>{
+//     console.log(`Details about first repository ID: ${result.id} and number of forks on this repo are ${result.forks}`);
+// })
+// .catch(err => console.log(err));

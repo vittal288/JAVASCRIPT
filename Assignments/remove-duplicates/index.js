@@ -40,6 +40,44 @@ function removeDuplicates(arr, prop) {
 
 }
 
+/*
+input array:
+const arr = [
+  { id: 1, name: "king" },
+  { id: 2, name: "master" },
+  { id: 2, name: "Sample" },
+  { id: 3, name: "lisa" },
+  { id: 4, name: "ion" },
+  { id: 4, name: "ionic" },
+  { id: 10, name: "glow" },
+  { id: 10, name: "hd-glow" }
+];
+
+output array:
+
+const arr = [
+  { id: 1, name: "king" },
+  { id: 2, name: "master" },
+  { id: 3, name: "lisa" },
+  { id: 4, name: "ion" },
+  { id: 10, name: "hd-glow" }
+];
+*/
+
+// function removeDuplicates(arr, key) {
+
+//     const unique = arr
+//          .map(e => e[key])
+  
+//        // store the keys of the unique objects
+//       .map((e, i, final) => final.indexOf(e) === i && i)
+  
+//       // eliminate the dead keys & store unique objects
+//       .filter(e => arr[e]).map(e => arr[e]);
+  
+//      return unique;
+// }
+
 module.exports = removeDuplicates;
 
 

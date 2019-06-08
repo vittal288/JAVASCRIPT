@@ -1,8 +1,12 @@
 {
   "scripts": {
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "test-one":"jest"
   },
   "dependencies": {
     "chai": "^4.1.2"
+  },
+  "devDependencies": {
+    "jest": "^24.7.1"
   }
 }

@@ -28,15 +28,17 @@ Variable Mutation : Changing the value of variable.
 
 Operator Precedence 
 
-### DATA TYPES
+### [DATA TYPES](https://academind.com/learn/javascript/reference-vs-primitive-values/)
 Javascript by default supports dynamic typing 
-+ ### Primitive Datatypes 
-    + Number 
-    + Boolean
-    + String 
-    + Undefined
-    + Null
-+ ### Non Primitive Datatypes 
++ ### Primitive Datatypes (stores the data on stack memory)
+    + The memory size which are known in the advance will store in stack memory
+        + Number 
+        + Boolean
+        + String 
+        + Undefined
+        + Null
++ ### Non Primitive Datatypes(stores in heap memory) 
+    + The memory size which are not known in the advance will store in heap memory(because array and object will changes its sizes dynamically)
     + Array 
     + Object 
 
@@ -301,4 +303,16 @@ class budget{
     }
 }
 ```
+### USEFUL METHODS
++ URLSearchParams : Returns an search parameters from URL in key valye pair 
+```
+    //Given URL : http://localhost:3000/new-post?quick-submit=true#submit
+    const query = new URLSearchParams(this.location.search);
+    for (let param of query.entries()) {
+        console.log(param); // yields ['start', '5']
+    }
+```
 
+
+# IMPORTANT NOTES
+1. We cannot use break/continue inside the forEach loop, because we will pass callback function to the forEach method, for more info [WHY WE CANNOT USE BREAK and CONTINUE inside FOREACH lopp](https://medium.com/front-end-weekly/3-things-you-didnt-know-about-the-foreach-loop-in-js-ff02cec465b1)
